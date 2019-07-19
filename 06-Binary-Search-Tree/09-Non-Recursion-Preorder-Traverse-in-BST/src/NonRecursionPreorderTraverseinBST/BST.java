@@ -86,7 +86,11 @@ public class BST<E extends Comparable<E>> {
         preOrder(node.right);
     }
 
-    // 二分搜索树的非递归前序遍历
+    /**
+     * 二分搜索树的非递归前序遍历
+     * 1.先将根节点压入栈
+     * 2.压入右孩子，再压入左孩子
+     */
     public void preOrderNR(){
 
         if(root == null)
@@ -97,7 +101,6 @@ public class BST<E extends Comparable<E>> {
         while(!stack.isEmpty()){
             Node cur = stack.pop();
             System.out.println(cur.e);
-
             if(cur.right != null)
                 stack.push(cur.right);
             if(cur.left != null)

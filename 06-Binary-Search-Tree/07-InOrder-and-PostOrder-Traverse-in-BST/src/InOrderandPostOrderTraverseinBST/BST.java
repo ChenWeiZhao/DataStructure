@@ -87,6 +87,7 @@ public class BST<E extends Comparable<E>> {
     }
 
     // 二分搜索树的中序遍历
+    // 排序搜索树，搜出来的元素是顺序排列的结果
     public void inOrder(){
         inOrder(root);
     }

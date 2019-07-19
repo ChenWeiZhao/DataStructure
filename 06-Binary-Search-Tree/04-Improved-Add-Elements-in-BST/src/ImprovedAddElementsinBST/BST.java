@@ -49,4 +49,13 @@ public class BST<E extends Comparable<E>> {
 
         return node;
     }
+
+    public static void main(String[] args) {
+        BST<Integer> bst = new BST<>();
+        bst.add(1);
+        bst.add(2);
+        bst.add(3);
+        bst.add(4);
+        System.out.println(bst);
+    }
 }

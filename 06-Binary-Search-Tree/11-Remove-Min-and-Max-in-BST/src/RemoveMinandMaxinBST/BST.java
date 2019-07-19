@@ -171,6 +171,7 @@ public class BST<E extends Comparable<E>> {
         return minimum(node.left);
     }
 
+
     // 寻找二分搜索树的最大元素
     public E maximum(){
         if(size == 0)
@@ -204,7 +205,7 @@ public class BST<E extends Comparable<E>> {
             size --;
             return rightNode;
         }
-
+        //node.left 即是移动元素
         node.left = removeMin(node.left);
         return node;
     }
@@ -219,14 +220,12 @@ public class BST<E extends Comparable<E>> {
     // 删除掉以node为根的二分搜索树中的最大节点
     // 返回删除节点后新的二分搜索树的根
     private Node removeMax(Node node){
-
         if(node.right == null){
             Node leftNode = node.left;
             node.left = null;
             size --;
             return leftNode;
         }
-
         node.right = removeMax(node.right);
         return node;
     }

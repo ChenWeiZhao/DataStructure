@@ -11,11 +11,10 @@ public class Main {
         BST<Integer> bst = new BST<>();
         Random random = new Random();
 
-        int n = 1000;
-
+        int n = 100;
         // test removeMin
         for(int i = 0 ; i < n ; i ++)
-            bst.add(random.nextInt(10000));
+            bst.add(random.nextInt(100));
 
         ArrayList<Integer> nums = new ArrayList<>();
         while(!bst.isEmpty())

@@ -33,15 +33,25 @@ public class ListNode {
     }
 
     // 以当前节点为头结点的链表信息字符串
-    @Override
-    public String toString(){
-        StringBuilder s = new StringBuilder();
-        ListNode cur = this;
-        while(cur != null){
-            s.append(cur.val + "->");
-            cur = cur.next;
-        }
-        s.append("NULL");
-        return s.toString();
-    }
+    //@Override
+    //public String toString(){
+    //    StringBuilder s = new StringBuilder();
+    //    ListNode cur = this;
+    //    while(cur != null){
+    //        s.append(cur.val + "->");
+    //        cur = cur.next;
+    //    }
+    //    s.append("NULL");
+    //    System.out.println("toSting");
+    //    return s.toString();
+    //}
+
+
+    //@Override
+    //public String toString() {
+    //    return "ListNode{" +
+    //            "val=" + val +
+    //            ", next=" + next +
+    //            '}';
+    //}
 }
