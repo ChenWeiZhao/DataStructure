@@ -1,3 +1,5 @@
+package PriorityQueue;
+
 import java.util.Random;
 
 public class Main {
@@ -10,7 +12,7 @@ public class Main {
         if(isHeapify)
             maxHeap = new MaxHeap<>(testData);
         else{
-            maxHeap = new MaxHeap<>();
+            maxHeap = new MaxHeap<Integer>();
             for(int num: testData)
                 maxHeap.add(num);
         }

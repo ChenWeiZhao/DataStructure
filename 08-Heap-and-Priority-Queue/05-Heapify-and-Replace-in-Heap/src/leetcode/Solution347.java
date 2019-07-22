@@ -1,4 +1,4 @@
-/// 347. Top K Frequent Elements
+package leetcode;/// 347. Top K Frequent Elements
 /// https://leetcode.com/problems/top-k-frequent-elements/description/
 ///
 /// 课程中在这里暂时没有介绍这个问题
@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.TreeMap;
 
-class Solution {
+class Solution347 {
 
     public class Array<E> {
 
@@ -334,6 +334,6 @@ class Solution {
 
         int[] nums = {1, 1, 1, 2, 2, 3};
         int k = 2;
-        printList((new Solution()).topKFrequent(nums, k));
+        printList((new Solution347()).topKFrequent(nums, k));
     }
 }

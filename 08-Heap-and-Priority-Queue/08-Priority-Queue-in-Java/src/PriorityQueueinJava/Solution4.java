@@ -1,4 +1,4 @@
-/// 347. Top K Frequent Elements
+package PriorityQueueinJava;/// 347. Top K Frequent Elements
 /// https://leetcode.com/problems/top-k-frequent-elements/description/
 
 import java.util.*;
@@ -8,37 +8,44 @@ public class Solution4 {
     public List<Integer> topKFrequent(int[] nums, int k) {
 
         TreeMap<Integer, Integer> map = new TreeMap<>();
-        for(int num: nums){
-            if(map.containsKey(num))
+        for (int num : nums) {
+            if (map.containsKey(num)) {
                 map.put(num, map.get(num) + 1);
-            else
+            } else {
                 map.put(num, 1);
+            }
         }
 
+        //匿名类是能拿到算法中所有的变量，即所有不可改变变量
         PriorityQueue<Integer> pq = new PriorityQueue<>(new Comparator<Integer>() {
+            //直接比较频次，重新定义了整型的比较定义
             @Override
             public int compare(Integer a, Integer b) {
                 return map.get(a) - map.get(b);
             }
         });
-        for(int key: map.keySet()){
-            if(pq.size() < k)
+
+        //直接用map比较了，不用freq类了
+        for (int key : map.keySet()) {
+            if (pq.size() < k) {
                 pq.add(key);
-            else if(map.get(key) > map.get(pq.peek())){
+            } else if (map.get(key) > map.get(pq.peek())) {
                 pq.remove();
                 pq.add(key);
             }
         }
 
         LinkedList<Integer> res = new LinkedList<>();
-        while(!pq.isEmpty())
+        while (!pq.isEmpty()) {
             res.add(pq.remove());
+        }
         return res;
     }
 
-    private static void printList(List<Integer> nums){
-        for(Integer num: nums)
+    private static void printList(List<Integer> nums) {
+        for (Integer num : nums) {
             System.out.print(num + " ");
+        }
         System.out.println();
     }
 

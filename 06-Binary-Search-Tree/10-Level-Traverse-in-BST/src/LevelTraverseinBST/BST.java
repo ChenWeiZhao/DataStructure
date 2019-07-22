@@ -180,8 +180,9 @@ public class BST<E extends Comparable<E>> {
 
     private String generateDepthString(int depth) {
         StringBuilder res = new StringBuilder();
-        for (int i = 0; i < depth; i++)
+        for (int i = 0; i < depth; i++) {
             res.append("--");
+        }
         return res.toString();
     }
 }

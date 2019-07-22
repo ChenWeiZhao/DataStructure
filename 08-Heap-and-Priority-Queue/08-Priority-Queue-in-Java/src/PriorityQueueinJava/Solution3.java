@@ -1,4 +1,4 @@
-/// 347. Top K Frequent Elements
+package PriorityQueueinJava;/// 347. Top K Frequent Elements
 /// https://leetcode.com/problems/top-k-frequent-elements/description/
 
 import java.util.*;
@@ -25,7 +25,9 @@ public class Solution3 {
                 map.put(num, 1);
         }
 
+        //传匿名Comparator类，只使用一次
         PriorityQueue<Freq> pq = new PriorityQueue<>(new Comparator<Freq>() {
+            //匿名类是能拿到算法中所有的变量，所有不可改变变量
             @Override
             public int compare(Freq a, Freq b) {
                 return a.freq - b.freq;

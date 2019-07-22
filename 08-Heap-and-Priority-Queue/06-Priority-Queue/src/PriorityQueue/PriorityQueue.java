@@ -1,33 +1,41 @@
+package PriorityQueue;
+
+/**
+ * 优先队列
+ */
 public class PriorityQueue<E extends Comparable<E>> implements Queue<E> {
 
     private MaxHeap<E> maxHeap;
 
-    public PriorityQueue(){
-        maxHeap = new MaxHeap<>();
+    public PriorityQueue() {
+        maxHeap = new MaxHeap<E>();
     }
 
     @Override
-    public int getSize(){
+    public int getSize() {
         return maxHeap.size();
     }
 
     @Override
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return maxHeap.isEmpty();
     }
 
+    /**
+     * @return 队首元素
+     */
     @Override
-    public E getFront(){
+    public E getFront() {
         return maxHeap.findMax();
     }
 
     @Override
-    public void enqueue(E e){
+    public void enqueue(E e) {
         maxHeap.add(e);
     }
 
     @Override
-    public E dequeue(){
+    public E dequeue() {
         return maxHeap.extractMax();
     }
 }

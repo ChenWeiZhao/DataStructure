@@ -1,3 +1,5 @@
+package PriorityQueue;
+
 public interface Queue<E> {
 
     int getSize();

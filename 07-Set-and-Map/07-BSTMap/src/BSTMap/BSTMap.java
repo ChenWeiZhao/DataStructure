@@ -182,7 +182,7 @@ public class BSTMap<K extends Comparable<K>, V> implements Map<K, V> {
         if(FileOperation.readFile("pride-and-prejudice.txt", words)) {
             System.out.println("Total words: " + words.size());
 
-            BSTMap<String, Integer> map = new BSTMap<>();
+            BSTMap<String, Integer> map = new BSTMap<String, Integer>();
             for (String word : words) {
                 if (map.contains(word))
                     map.set(word, map.get(word) + 1);
